@@ -34,7 +34,7 @@ async def on_message(message):
         return
 
     if 'lunch' in message.content:
-        response = '@aarushi @shaurya @shomil @vaibhav @sumukh-shivakumar @victor-sun when\'s lunch?'
+        response = '@aarushi @shaurya @shomil @vaibhav @kanyes @sumukh-shivakumar @victor-sun when\'s lunch?'
         await message.channel.send(response)
 
     if message.content == '/overheard':
