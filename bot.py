@@ -13,6 +13,13 @@ AIRTABLE_AUTH = os.getenv('AIRTABLE_AUTH')
 
 client = discord.Client()
 
+def get_random_idea():
+    """
+    Returns a randomly selected idea from ideas.txt
+    """
+    ideas = open('ideas.txt', 'r').read().split('\n')
+    return random.choice(ideas)
+
 def get_overheard():
     """
     Returns a quote from the Overheard Airtable.
@@ -65,6 +72,9 @@ async def on_message(message):
     if 'lunch' in message.content:
         response = '@aarushi @shaurya @shomil @vaibhav @kanyes @sumukh-shivakumar @victor-sun when\'s lunch?'
         await message.channel.send(response)
+
+    if message.content.startswith('/idea'):
+        await message.channel.send(get_random_idea())
 
     if message.content.startswith('/class'):
         try:

@@ -1,0 +1,50 @@
+Cheap transportation for homeowners, similar to Slack. Uses VR.
+Event planning for minorities, similar to Instagram. Uses chatbots.
+Experience planning for women in STEM, similar to Pinterest. Uses React Native.
+Education for brogrammers, similar to Instagram. Uses IoT.
+Carpooling for couch potatoes, similar to reddit. Uses wearables.
+Social media for children, similar to Doordash. Uses dash buttons.
+Being bored for politicians, similar to Fortnite. Uses raspberry pi.
+Job hunting for celebrities, similar to Black Mirror. Uses dash buttons.
+Digital wellbeing for the LGBT community, similar to Doordash. Uses smart speakers.
+Resource maps for millenials, similar to Yelp. Uses wearables.
+Job hunting for teenagers, similar to Instagram. Uses raspberry pi.
+Delivery for Windows phone users, similar to Shazam. Uses dash buttons.
+Sharing unnecessary data about yourself for minorities, similar to eBay. Uses IoT.
+Job hunting for McDonalds employees, similar to eBay. Uses 3D printing.
+A repetitive addicting mobile game for brogrammers, similar to Google Trips. Uses 3D printing.
+CRM for farmers, similar to Instagram. Uses selling ads.
+Making money for farmers, similar to Slack. Uses x-as-a-service.
+Sharing music for small businesses, similar to Welcome. Uses the gig economy.
+Cheap transportation for an unrealistically large demographic, similar to Upstream. Uses AR.
+News aggregation for Republicans, similar to Google News. Uses streaming.
+Delivery for Windows phone users, similar to reddit. Uses streaming.
+Education for people that genuinely enjoy 21 Pilots, similar to reddit. Uses machine learning.
+Places to stay for Christians, similar to Netflix. Uses blockchain.
+Event planning for brogrammers, similar to GoPro. Uses x-as-a-service.
+Saving money for members of the Tres Commas Club, similar to Youtube. Uses sensors.
+Spam prevention for children, similar to Kickstarter. Uses big data.
+Delivery for couch potatoes, similar to Google News. Uses automation.
+Gambling for Christians, similar to Welcome. Uses x-as-a-service.
+Sharing music for politicians, similar to Snapchat. Uses too many APIs.
+Memes for people that genuinely enjoy 21 Pilots, similar to Uber. Uses AR.
+Gambling for atheists, similar to reddit. Uses low-power bluetooth beacons.
+Event planning for berkeley students, similar to eBay. Uses AR.
+Education for middle-class suburban moms, similar to Amazon. Uses dash buttons.
+Cheap transportation for 18-to 34-year-old college-educated single white men making at least $70,000 per year, similar to Instacart. Uses AR.
+Sharing unnecessary data about yourself for small businesses, similar to Black Mirror. Uses endless scrolling.
+Tech elitism for people that genuinely enjoy 21 Pilots, similar to GoPro. Uses blockchain.
+Ad tech for atheists, similar to Pinterest. Uses React Native.
+Making money for seniors, similar to GoPro. Uses wearables.
+Sharing unnecessary data about yourself for an unrealistically large demographic, similar to Bird/Lime. Uses big data.
+Being bored for restaurants, similar to Robinhood. Uses big data.
+Fitness for children, similar to Wish. Uses low-power bluetooth beacons.
+Event planning for celebrities, similar to Kiwibot. Uses streaming.
+Memes for Silicon Valley entrepeneurs, similar to Google Trips. Uses smart speakers.
+Office management for outdoorsy people, similar to Venmo. Uses React Native.
+Statistics tracking for Republicans, similar to Airbnb. Uses big data.
+Data reference for children, similar to Kiwibot. Uses machine learning.
+Job hunting for Windows phone users, similar to Instacart. Uses too many APIs.
+Delivery for homeowners, similar to Roku. Uses automation.
+Places to stay for celebrities, similar to Uber. Uses VR.
+Job hunting for atheists, similar to Stubhub. Uses sensors.
