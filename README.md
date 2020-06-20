@@ -1,5 +1,5 @@
 # MDiscordBot
-MDiscordBot - MDB's very own Discord Bot! Submit a PR to add features.
+MDiscordBot - MDB's very own Discord Bot!
 
 Current Functionality:
 
