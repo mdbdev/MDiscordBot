@@ -5,6 +5,8 @@ import random
 import discord
 from dotenv import load_dotenv
 
+from berkeleytime import lookup_class
+
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 AIRTABLE_AUTH = os.getenv('AIRTABLE_AUTH')
@@ -63,6 +65,14 @@ async def on_message(message):
     if 'lunch' in message.content:
         response = '@aarushi @shaurya @shomil @vaibhav @kanyes @sumukh-shivakumar @victor-sun when\'s lunch?'
         await message.channel.send(response)
+
+    if message.content.startswith('/class'):
+        try:
+            code = ' '.join(message.content.split(' ')[1:])
+            await message.channel.send(lookup_class(code))
+        except Exception as e:
+            print(e)
+            await message.channel.send('Uh oh! I couldn\'t find information for that class. Perhaps check your formatting?')
 
     if message.content.startswith('/job'):
         try:
