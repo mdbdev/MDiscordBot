@@ -5,7 +5,7 @@ import random
 import discord
 from dotenv import load_dotenv
 from scripts.spoof import spoof
-from berkeleytime import lookup_class
+from scripts.berkeleytime import lookup_class
 from cryptography.fernet import Fernet
 
 load_dotenv()
@@ -19,7 +19,7 @@ def get_random_idea():
     """
     Returns a randomly selected idea from ideas.txt
     """
-    ideas = open('ideas.txt', 'r').read().split('\n')
+    ideas = open('scripts/ideas.txt', 'r').read().split('\n')
     return random.choice(ideas)
 
 def get_overheard():
@@ -36,7 +36,6 @@ def lookup_referrals(company_code):
     """
     Looks up who we know in our Referral Network Airtable (given a company).
     """
-    import requests
     headers = {'Authorization': f'Bearer {AIRTABLE_AUTH}'}
     params = (('maxRecords', '50'),('view', 'API'))
     response = requests.get('https://api.airtable.com/v0/appvE25wUsaju5CjV/Network', headers=headers, params=params)

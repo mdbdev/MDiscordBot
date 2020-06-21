@@ -3,7 +3,7 @@ import markovify
 from cryptography.fernet import Fernet
 
 def spoof(person, crypto_key):
-    with open('encoded_messages.txt', 'rb') as file:
+    with open('scripts/encoded_messages.txt', 'rb') as file:
         encoded_text = file.read()
         cipher_suite = Fernet(crypto_key)
         decoded_json = cipher_suite.decrypt(encoded_text).decode('utf8')
