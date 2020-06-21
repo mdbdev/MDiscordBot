@@ -9,6 +9,9 @@ verify_ssl = true
 "discord.py" = "*"
 python-dotenv = "*"
 requests = "*"
+markovify = "*"
+objcrypt = "*"
+cryptography = "*"
 
 [requires]
 python_version = "3.7"

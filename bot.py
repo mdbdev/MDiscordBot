@@ -4,12 +4,14 @@ import requests
 import random
 import discord
 from dotenv import load_dotenv
-
+from scripts.spoof import spoof
 from berkeleytime import lookup_class
+from cryptography.fernet import Fernet
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 AIRTABLE_AUTH = os.getenv('AIRTABLE_AUTH')
+CRYPTO_KEY = os.getenv('CRYPTO_KEY')
 
 client = discord.Client()
 
@@ -76,7 +78,17 @@ async def on_message(message):
     if message.content.startswith('/idea'):
         await message.channel.send(get_random_idea())
 
+    if message.content.startswith('/spoof'):
+        print(str(message.author) + ' used the /spoof command: ' + str(message.content))
+        try:
+            person = ' '.join(message.content.split(' ')[1:])
+            await message.channel.send(spoof(person, CRYPTO_KEY))
+        except Exception as e:
+            print(e)
+            await message.channel.send(f'Oh no! I couldn\'t find any messages to train myself on for {person}.')
+
     if message.content.startswith('/class'):
+        print(str(message.author) + ' used the /class command: ' + str(message.content))
         try:
             code = ' '.join(message.content.split(' ')[1:])
             await message.channel.send(lookup_class(code))
@@ -85,6 +97,7 @@ async def on_message(message):
             await message.channel.send('Uh oh! I couldn\'t find information for that class. Perhaps check your formatting?')
 
     if message.content.startswith('/job'):
+        print(str(message.author) + ' used the /job command: ' + str(message.content))
         try:
             workplace = message.content.split(' ')[1]
             await message.channel.send(lookup_referrals(workplace))
@@ -94,6 +107,7 @@ async def on_message(message):
             await message.channel.send(f'Uh oh! I couldn\'t find anyone at {company}. View the network: http://go.mdb.dev/referrals')
 
     if message.content == '/overheard':
+        print(str(message.author) + ' used the /overheard command: ' + str(message.content))
         response = get_overheard()
         await message.channel.send(response)
 
