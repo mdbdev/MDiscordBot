@@ -124,7 +124,6 @@ Hey there! Here's what I can do.
 
 **/spoof [NAME]:** uses a markov-chain text generator to spoof someone based on their messages in the MDB chats
 
-Add more features by cloning the repo at: https://github.com/mdbdev/MDiscordBot
         """
         await message.channel.send(response)
 
