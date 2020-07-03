@@ -88,9 +88,7 @@ async def on_message(message):
 
     if message.content.startswith('/habit'):
         habits = ['Be proactive', 'Begin with the end of mind', 'First things first', 'Think win-win', 'Seek first to understand, then to be understood', 'Synergize!', 'Sharpen the saw!']
-        habit = random.choice(habits)
-        habit = habit + "\n\nThis habit was brought to you by @Kanyes"
-        await message.channel.send(habit)
+        await message.channel.send(random.choice(habits))
 
     if message.content.startswith('/class'):
         print(str(message.author) + ' used the /class command: ' + str(message.content))
