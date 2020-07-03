@@ -20,6 +20,6 @@ def spoof(person, crypto_key):
         raise Exception("No person.")
         
     text_model = markovify.NewlineText('\n'.join(content))
-    sentence = text_model.make_sentence(min_words=1, tries=100)
+    sentence = text_model.make_sentence(min_words=1, tries=1000)
     
     return sentence

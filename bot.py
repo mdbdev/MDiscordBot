@@ -81,7 +81,10 @@ async def on_message(message):
         print(str(message.author) + ' used the /spoof command: ' + str(message.content))
         try:
             person = ' '.join(message.content.split(' ')[1:])
-            await message.channel.send(spoof(person, CRYPTO_KEY))
+            if person.lower() == 'katniss':
+                await message.channel.send('i love coding but i also love drinking')
+            else:
+                await message.channel.send(spoof(person, CRYPTO_KEY))
         except Exception as e:
             print(e)
             await message.channel.send(f'Oh no! I couldn\'t find any messages to train myself on for {person}.')
