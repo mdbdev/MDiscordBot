@@ -83,6 +83,11 @@ async def on_message(message):
             person = ' '.join(message.content.split(' ')[1:])
             if person.lower() == 'katniss':
                 await message.channel.send('i love coding but i also love drinking')
+            else if person == person.lower() == 'radhika':
+                if random.random() > 0.5:
+                    await message.channel.send('fucking cars are fucking final')
+                else:
+                    await message.channel.send(spoof(person, CRYPTO_KEY))
             else:
                 await message.channel.send(spoof(person, CRYPTO_KEY))
         except Exception as e:
