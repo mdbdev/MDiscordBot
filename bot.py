@@ -83,9 +83,14 @@ async def on_message(message):
             person = ' '.join(message.content.split(' ')[1:])
             if person.lower() == 'katniss':
                 await message.channel.send('i love coding but i also love drinking')
-            elif person == person.lower() == 'radhika':
+            elif person.lower() == 'radhika':
                 if random.random() > 0.5:
                     await message.channel.send('fucking cars are fucking final')
+                else:
+                    await message.channel.send(spoof(person, CRYPTO_KEY))
+            elif person.lower() == 'niky':
+                if random.random() > 0.5:
+                    await message.channel.send('I just don’t believe in the product because like, Facebook, the baseline of everything they do is desire to show people more ads.')
                 else:
                     await message.channel.send(spoof(person, CRYPTO_KEY))
             else:
