@@ -2,7 +2,7 @@ import requests
 
 def get_joke():
     joke = requests.get('https://icanhazdadjoke.com/slack').json().get('attachments')[0].get('text')
-    return joke
+    return '> ' + str(joke)
 
 def get_quote():
     data = requests.get('http://api.quotable.io/random').json()
