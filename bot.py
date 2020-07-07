@@ -5,6 +5,7 @@ import random
 import discord
 from dotenv import load_dotenv
 from scripts.spoof import spoof
+from scripts import quotes, sliver
 from scripts.berkeleytime import lookup_class
 from cryptography.fernet import Fernet
 
@@ -98,6 +99,17 @@ async def on_message(message):
         except Exception as e:
             print(e)
             await message.channel.send(f'Oh no! I couldn\'t find any messages to train myself on for {person}.')
+
+    if message.content.startswith('/joke'):
+        await message.channel.send(quotes.get_joke())
+    
+    if message.content.startswith('/quote'):
+        await message.channel.send(quotes.get_quote())
+
+    if message.content.startswith('/sliver'):
+        await message.channel.send(sliver.get_pizza())
+
+
 
     if message.content.startswith('/habit'):
         habits = ['Be proactive', 'Begin with the end of mind', 'First things first', 'Think win-win', 'Seek first to understand, then to be understood', 'Synergize!', 'Sharpen the saw!']

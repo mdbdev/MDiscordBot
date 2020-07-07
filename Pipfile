@@ -12,6 +12,7 @@ requests = "*"
 markovify = "*"
 objcrypt = "*"
 cryptography = "*"
+bs4 = "*"
 
 [requires]
 python_version = "3.7"
