@@ -161,6 +161,8 @@ Hey there! Here's what I can do.
 
 **/spoof [NAME]:** uses a markov-chain text generator to spoof someone based on their messages in the MDB chats
 
+**/name [NAME]:** finds a random nickname from the MDB chats for a particular person
+
         """
         await message.channel.send(response)
 
