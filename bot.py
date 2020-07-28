@@ -4,6 +4,7 @@ import requests
 import random
 import discord
 from dotenv import load_dotenv
+from scripts.whois import whois
 from scripts.spoof import spoof
 from scripts import quotes, sliver
 from scripts.berkeleytime import lookup_class
@@ -79,7 +80,6 @@ async def on_message(message):
         await message.channel.send(get_random_idea())
 
     if message.content.startswith('/spoof'):
-        print(str(message.author) + ' used the /spoof command: ' + str(message.content))
         try:
             person = ' '.join(message.content.split(' ')[1:])
             if person.lower() == 'katniss':
@@ -99,6 +99,14 @@ async def on_message(message):
         except Exception as e:
             print(e)
             await message.channel.send(f'Oh no! I couldn\'t find any messages to train myself on for {person}.')
+
+    if message.content.startswith('/name'):
+        try:
+            person = ' '.join(message.content.split(' ')[1:])
+            await message.channel.send(whois(person, CRYPTO_KEY))
+        except Exception as e:
+            print(e)
+            await message.channel.send(f'Oh no! I couldn\'t find any nicknames for {person}.')
 
     if message.content.startswith('/joke'):
         await message.channel.send(quotes.get_joke())
