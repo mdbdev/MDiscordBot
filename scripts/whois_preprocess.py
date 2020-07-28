@@ -17,14 +17,17 @@ for folder in folders:
     for message in data.get('messages'):
         if message.get('content') != None and 'nickname' in message['content']:
             message = message.get('content')
-            if 'set the nickname for' not in message: continue
-            message = message.split(' set the nickname for ')[1]
-            message = message.split(' to ')
-            name = message[0]
-            content = ' '.join(message[1:])
-            messages[name].append(content)
-
-print(messages)
+            if 'set the nickname for' in message:
+                message = message.split(' set the nickname for ')[1]
+                message = message.split(' to ')
+                name = message[0]
+                content = ' '.join(message[1:])
+                messages[name].append(content)
+            elif 'your nickname' in message:
+                message = message.split(' set your nickname to ')
+                name = 'Shomil Jain'
+                content = message[1]
+                messages[name].append(content)
 
 json_str = json.dumps(messages)
 cipher_suite = Fernet(CRYPTO_KEY)
