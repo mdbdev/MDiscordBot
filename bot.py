@@ -64,6 +64,20 @@ async def on_ready():
     print(f'{client.user} has connected to Discord!')
 
 @client.event
+async def on_voice_state_update(member, before, after):
+    """
+    This is triggered when a member joins or leaves a voice channel.
+    Testing: sending message to single user right now
+    """
+    person = member.display_name
+    connected = after.channel
+
+    if connected:
+        user = client.get_user(721413586374885376)
+        await user.send(person + ' joined voice channel ' + connected.name)
+
+
+@client.event
 async def on_message(message):
     """
     This is triggered every time a message is sent.
