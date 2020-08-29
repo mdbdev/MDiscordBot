@@ -10,6 +10,10 @@ from scripts import quotes, sliver
 from scripts.berkeleytime import lookup_class
 from cryptography.fernet import Fernet
 
+import time
+
+from datetime import datetime
+
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 AIRTABLE_AUTH = os.getenv('AIRTABLE_AUTH')
@@ -63,6 +67,8 @@ async def on_ready():
     """
     print(f'{client.user} has connected to Discord!')
 
+time_tracker = {}
+
 @client.event
 async def on_voice_state_update(member, before, after):
     """
@@ -74,8 +80,22 @@ async def on_voice_state_update(member, before, after):
     connected = after.channel
 
     if not previously_connected and connected:
+        message = person + ' joined voice channel ' + connected.name
+        print(message)
         channel = client.get_channel(723419576427216948)
-        await user.send(person + ' joined voice channel ' + connected.name)
+        now = time.time()
+        if len(connected.members) != 1:
+            print('This is the first person in the voice channel!')
+        else:
+            last_time = time_tracker.get(person)
+            if last_time == None or time.time() - last_time > 3600:
+                time_tracker[person] = time.time()
+                print('SENDING!')
+                await channel.send(message)
+            else:
+                print('Not sending - spam prevention')
+    else:
+        print('Not sending - jumped between connected channels')
 
 
 @client.event
