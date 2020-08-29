@@ -70,10 +70,11 @@ async def on_voice_state_update(member, before, after):
     Testing: sending message to single user right now
     """
     person = member.display_name
+    previously_connected = before.channel
     connected = after.channel
 
-    if connected:
-        user = client.get_user(721413586374885376)
+    if not previously_connected and connected:
+        channel = client.get_channel(723419576427216948)
         await user.send(person + ' joined voice channel ' + connected.name)
 
 
