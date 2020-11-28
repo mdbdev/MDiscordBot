@@ -9,7 +9,6 @@ from scripts.spoof import spoof
 from scripts import quotes, sliver
 from scripts.berkeleytime import lookup_class
 from cryptography.fernet import Fernet
-
 import time
 
 from datetime import datetime
