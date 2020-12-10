@@ -84,7 +84,8 @@ async def on_voice_state_update(member, before, after):
         channel = client.get_channel(723419576427216948)
         now = time.time()
         if len(connected.members) != 1:
-            print('This is the first person in the voice channel!')
+            print(connected.members)
+            print('This is NOT the first person in the voice channel!')
         else:
             last_time = time_tracker.get(person)
             if last_time == None or time.time() - last_time > 3600:
