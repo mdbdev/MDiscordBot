@@ -83,7 +83,7 @@ async def on_voice_state_update(member, before, after):
         print(message)
         channel = client.get_channel(723419576427216948)
         now = time.time()
-        if len(connected.members) != 1:
+        if len(connected.members) not in [0, 1]:
             print(connected.members)
             print('This is NOT the first person in the voice channel!')
         else:
