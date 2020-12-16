@@ -8,7 +8,7 @@ CRYPTO_KEY = os.getenv('CRYPTO_KEY')
 
 path = '/Users/shomil/Documents/Datasets/personal/facebook/messages/inbox/'
 
-folders = ['mdbsp19OLD_DTfVjN88rA/', 'mdbf18_ZrUYaQmPJw/', 'MDBducksofa_SY4Xa7bzyg/', '1MDB_AVGyzYtyjw/', 'FALL2019DEPRECATEDMDBLship_Evy4VoLVXw/', 'MDBExecNotTables_FAXF8id-LA/', 'MDBLeadershipWearemostlyIndiansDear_cOKAwhqKhQ/']
+folders = ['mdbsp19OLD_DTfVjN88rA/', 'mdbfa20_mloedchmua/', 'mdbf18_ZrUYaQmPJw/', 'mdbwumbodb_sy4xa7bzyg/', '1MDB_AVGyzYtyjw/']
 
 messages = defaultdict(list)
 for folder in folders:
